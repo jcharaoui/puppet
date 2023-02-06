@@ -694,7 +694,7 @@ class amod::bad_type {
        .and output(%r{Notice: /Stage\[main\]/Main/Notify\[deferred4x\]/message: defined 'message' as 'I am deferred'}).to_stdout
     end
 
-    it "fails to apply a deferred function with an unsatified prerequisite" do
+    it "fails to apply a deferred function with an unsatisfied prerequisite" do
       apply.command_line.args = ['-e', deferred_manifest]
       expect {
         apply.run
